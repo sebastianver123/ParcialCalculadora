@@ -11,8 +11,7 @@ package parcialcalculadora;
  */
 public class Presentacion extends javax.swing.JFrame {
 
-    Calculadora respuesta;
-    
+    Calculadora miCalculo;
     
     /**
      * Creates new form Presentacion
@@ -30,16 +29,19 @@ public class Presentacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        num1 = new javax.swing.JTextField();
-        num2 = new javax.swing.JTextField();
-        oper1 = new javax.swing.JButton();
-        oper2 = new javax.swing.JButton();
-        oper3 = new javax.swing.JButton();
-        oper4 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        resultado = new javax.swing.JTextField();
+        nume1 = new javax.swing.JTextField();
+        nume2 = new javax.swing.JTextField();
+        suma = new javax.swing.JButton();
+        respuesta = new javax.swing.JLabel();
+        Resultado = new javax.swing.JLabel();
+        resta = new javax.swing.JButton();
+        multiplicar = new javax.swing.JButton();
+        dividir = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,27 +49,35 @@ public class Presentacion extends javax.swing.JFrame {
 
         jLabel2.setText("Número 2:");
 
-        oper1.setText("+");
-        oper1.addMouseListener(new java.awt.event.MouseAdapter() {
+        suma.setText("+");
+        suma.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                oper1MouseClicked(evt);
+                sumaMouseClicked(evt);
             }
         });
 
-        oper2.setText("-");
-        oper2.addMouseListener(new java.awt.event.MouseAdapter() {
+        Resultado.setText("0");
+
+        resta.setText("-");
+        resta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                oper2MouseClicked(evt);
+                restaMouseClicked(evt);
             }
         });
 
-        oper3.setText("*");
+        multiplicar.setText("*");
+        multiplicar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                multiplicarMouseClicked(evt);
+            }
+        });
 
-        oper4.setText("/");
-
-        jLabel3.setText("RESULTADO");
-
-        resultado.setEditable(false);
+        dividir.setText("/");
+        dividir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dividirMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,27 +90,28 @@ public class Presentacion extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(nume1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(nume2, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(oper1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(oper2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(oper3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(respuesta))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(suma, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(oper4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addComponent(jLabel3)))
-                .addContainerGap(123, Short.MAX_VALUE))
+                                .addComponent(resta, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(multiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,48 +119,75 @@ public class Presentacion extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(nume1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                    .addComponent(nume2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(oper1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(oper2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(oper3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(oper4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(suma, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(resta, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(multiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
+                .addComponent(respuesta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addGap(40, 40, 40))
+                .addComponent(Resultado)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void oper1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_oper1MouseClicked
+    private void sumaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sumaMouseClicked
 
-        String numero1 =num1.getText();
-        double dob1 = Double.parseDouble(numero1);
-        String numero2 =num2.getText();
-        double dob2 = Double.parseDouble(numero2);
+        String numero1= nume1.getText();
+        double doub1 = Double.parseDouble(numero1);
+        String numero2= nume2.getText();
+        double doub2 = Double.parseDouble(numero2);
         
-            
+        Resultado.setText(String.valueOf(doub1+doub2));
+        //Al llamar el metodo calculadora no da resultado, muestra nullpointer exception!!
         
-        this.resultado.setText(String.valueOf(respuesta.suma(dob1, dob2)));
         
+        
+    }//GEN-LAST:event_sumaMouseClicked
 
-    }//GEN-LAST:event_oper1MouseClicked
+    private void restaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_restaMouseClicked
+        
+        String numero1= nume1.getText();
+        double doub1 = Double.parseDouble(numero1);
+        String numero2= nume2.getText();
+        double doub2 = Double.parseDouble(numero2);
+        
+        Resultado.setText(String.valueOf(doub1-doub2));
+        //Al llamar el metodo calculadora no da resultado, muestra nullpointer exception!!
+        
+        
+    }//GEN-LAST:event_restaMouseClicked
 
-    private void oper2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_oper2MouseClicked
+    private void multiplicarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_multiplicarMouseClicked
+          String numero1= nume1.getText();
+        double doub1 = Double.parseDouble(numero1);
+        String numero2= nume2.getText();
+        double doub2 = Double.parseDouble(numero2);
         
-       //boton resta
+        Resultado.setText(String.valueOf(doub1*doub2));
+        //Al llamar el metodo calculadora no da resultado, muestra nullpointer exception!!
+                
+    }//GEN-LAST:event_multiplicarMouseClicked
+
+    private void dividirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dividirMouseClicked
+          String numero1= nume1.getText();
+        double doub1 = Double.parseDouble(numero1);
+        String numero2= nume2.getText();
+        double doub2 = Double.parseDouble(numero2);
         
+        Resultado.setText(String.valueOf(doub1/doub2));
+        //Al llamar el metodo calculadora no da resultado, muestra nullpointer exception!!
         
-        
-    }//GEN-LAST:event_oper2MouseClicked
+    }//GEN-LAST:event_dividirMouseClicked
 
     /**
      * @param args the command line arguments
@@ -187,15 +225,16 @@ public class Presentacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Resultado;
+    private javax.swing.JButton dividir;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField num1;
-    private javax.swing.JTextField num2;
-    private javax.swing.JButton oper1;
-    private javax.swing.JButton oper2;
-    private javax.swing.JButton oper3;
-    private javax.swing.JButton oper4;
-    private javax.swing.JTextField resultado;
+    private javax.swing.JButton multiplicar;
+    private javax.swing.JTextField nume1;
+    private javax.swing.JTextField nume2;
+    private javax.swing.JLabel respuesta;
+    private javax.swing.JButton resta;
+    private javax.swing.JButton suma;
     // End of variables declaration//GEN-END:variables
 }

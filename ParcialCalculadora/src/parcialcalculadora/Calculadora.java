@@ -13,13 +13,13 @@ public class Calculadora {
     
   
     
-    public double suma(double num1, double num2){
+   public double Sumar(double num1, double num2){
         
-        double suma;
-        suma= num1+num2;
-        return suma;
-        
+        double Suma;
+        Suma=num1+num2;
+        return Suma;
     }
+   
     public double resta(double num1, double num2){
         
         return num1-num2;

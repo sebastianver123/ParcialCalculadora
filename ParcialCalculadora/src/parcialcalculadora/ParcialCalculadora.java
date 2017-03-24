@@ -16,7 +16,7 @@ public class ParcialCalculadora {
      */
     public static void main(String[] args) {
         
-        Calculadora miCalculadora = new Calculadora();
+       
         
         Presentacion miPresentacion= new Presentacion();
         
