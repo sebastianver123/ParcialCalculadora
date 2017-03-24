@@ -152,7 +152,7 @@ public class Presentacion extends javax.swing.JFrame {
                                 .addComponent(seno)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(coseno)
-                                .addGap(18, 18, 18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(tan))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(12, 12, 12)
@@ -278,8 +278,13 @@ public class Presentacion extends javax.swing.JFrame {
         
         double a= Math.toRadians(doub1);
         
+       if (a==90 && a==-90 ){
+        Resultado.setText("NO ES VALIDO");
+           
+       }else{
         Resultado.setText(String.valueOf(Math.tan(a)));
-
+       }
+         
     }//GEN-LAST:event_tanActionPerformed
 
     /**

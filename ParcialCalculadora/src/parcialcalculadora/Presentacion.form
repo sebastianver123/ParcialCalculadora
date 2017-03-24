@@ -68,7 +68,7 @@
                               <Component id="seno" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="coseno" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="tan" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
