@@ -40,6 +40,7 @@ public class Presentacion extends javax.swing.JFrame {
         resta = new javax.swing.JButton();
         multiplicar = new javax.swing.JButton();
         dividir = new javax.swing.JButton();
+        seno = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
 
@@ -79,6 +80,13 @@ public class Presentacion extends javax.swing.JFrame {
             }
         });
 
+        seno.setText("seno");
+        seno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                senoMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -110,7 +118,10 @@ public class Presentacion extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(multiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(seno)))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -130,7 +141,9 @@ public class Presentacion extends javax.swing.JFrame {
                     .addComponent(resta, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(multiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(seno)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addComponent(respuesta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Resultado)
@@ -189,6 +202,17 @@ public class Presentacion extends javax.swing.JFrame {
         
     }//GEN-LAST:event_dividirMouseClicked
 
+    private void senoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_senoMouseClicked
+
+        String numero1= nume1.getText();
+        double doub1 = Double.parseDouble(numero1);
+        
+        double a= Math.toRadians(doub1);
+        
+        Resultado.setText(String.valueOf(Math.sin(a)));
+    
+    }//GEN-LAST:event_senoMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -235,6 +259,7 @@ public class Presentacion extends javax.swing.JFrame {
     private javax.swing.JTextField nume2;
     private javax.swing.JLabel respuesta;
     private javax.swing.JButton resta;
+    private javax.swing.JButton seno;
     private javax.swing.JButton suma;
     // End of variables declaration//GEN-END:variables
 }

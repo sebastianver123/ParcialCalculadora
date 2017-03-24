@@ -66,6 +66,10 @@
                           </Group>
                       </Group>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="seno" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace pref="65" max="32767" attributes="0"/>
           </Group>
@@ -91,7 +95,9 @@
                   <Component id="multiplicar" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="dividir" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="134" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="seno" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="87" max="32767" attributes="0"/>
               <Component id="respuesta" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Resultado" min="-2" max="-2" attributes="0"/>
@@ -152,6 +158,14 @@
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="dividirMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="seno">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="seno"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="senoMouseClicked"/>
       </Events>
     </Component>
   </SubComponents>
