@@ -41,6 +41,9 @@ public class Presentacion extends javax.swing.JFrame {
         multiplicar = new javax.swing.JButton();
         dividir = new javax.swing.JButton();
         seno = new javax.swing.JButton();
+        coseno = new javax.swing.JButton();
+        tan = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
@@ -80,12 +83,38 @@ public class Presentacion extends javax.swing.JFrame {
             }
         });
 
-        seno.setText("seno");
+        seno.setText("SENO");
         seno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 senoMouseClicked(evt);
             }
         });
+
+        coseno.setText("COSENO");
+        coseno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cosenoMouseClicked(evt);
+            }
+        });
+        coseno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cosenoActionPerformed(evt);
+            }
+        });
+
+        tan.setText("TANGENTE");
+        tan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tanMouseClicked(evt);
+            }
+        });
+        tan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tanActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Solo en Número 1 para las funciones trigonometricas");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -118,11 +147,17 @@ public class Presentacion extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(multiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(seno)))
-                .addContainerGap(65, Short.MAX_VALUE))
+                                .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(seno)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(coseno)
+                                .addGap(18, 18, 18)
+                                .addComponent(tan))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(jLabel3)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,9 +176,14 @@ public class Presentacion extends javax.swing.JFrame {
                     .addComponent(resta, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(multiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(seno)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addGap(11, 11, 11)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(seno)
+                    .addComponent(coseno)
+                    .addComponent(tan))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addComponent(respuesta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Resultado)
@@ -213,6 +253,35 @@ public class Presentacion extends javax.swing.JFrame {
     
     }//GEN-LAST:event_senoMouseClicked
 
+    private void cosenoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cosenoMouseClicked
+        
+         String numero1= nume1.getText();
+        double doub1 = Double.parseDouble(numero1);
+        
+        double a= Math.toRadians(doub1);
+        
+        Resultado.setText(String.valueOf(Math.cos(a)));
+    }//GEN-LAST:event_cosenoMouseClicked
+
+    private void cosenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cosenoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cosenoActionPerformed
+
+    private void tanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tanMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tanMouseClicked
+
+    private void tanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tanActionPerformed
+          
+         String numero1= nume1.getText();
+        double doub1 = Double.parseDouble(numero1);
+        
+        double a= Math.toRadians(doub1);
+        
+        Resultado.setText(String.valueOf(Math.tan(a)));
+
+    }//GEN-LAST:event_tanActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -250,10 +319,12 @@ public class Presentacion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Resultado;
+    private javax.swing.JButton coseno;
     private javax.swing.JButton dividir;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton multiplicar;
     private javax.swing.JTextField nume1;
     private javax.swing.JTextField nume2;
@@ -261,5 +332,6 @@ public class Presentacion extends javax.swing.JFrame {
     private javax.swing.JButton resta;
     private javax.swing.JButton seno;
     private javax.swing.JButton suma;
+    private javax.swing.JButton tan;
     // End of variables declaration//GEN-END:variables
 }

@@ -64,14 +64,21 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="dividir" min="-2" pref="47" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="seno" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="coseno" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="tan" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="seno" min="-2" max="-2" attributes="0"/>
-                  </Group>
               </Group>
-              <EmptySpace pref="65" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -95,9 +102,15 @@
                   <Component id="multiplicar" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="dividir" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="seno" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="87" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="seno" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="coseno" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tan" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="71" max="32767" attributes="0"/>
               <Component id="respuesta" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Resultado" min="-2" max="-2" attributes="0"/>
@@ -162,11 +175,34 @@
     </Component>
     <Component class="javax.swing.JButton" name="seno">
       <Properties>
-        <Property name="text" type="java.lang.String" value="seno"/>
+        <Property name="text" type="java.lang.String" value="SENO"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="senoMouseClicked"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="coseno">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="COSENO"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cosenoMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cosenoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="tan">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="TANGENTE"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tanMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tanActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Solo en N&#xfa;mero 1 para las funciones trigonometricas"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
